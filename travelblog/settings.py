@@ -34,6 +34,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['8000-studentofco-travellingb-0sw0zyhz5me.ws-eu108.gitpod.io', "travelblog4-5071964a1b25.herokuapp.com"]
 
+ACCOUNT_EMAIL_VERIFICATION = 'none'
+
 
 # Application definition
 
@@ -93,6 +95,16 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'travelblog.wsgi.application'
+
+
+CSRF_TRUSTED_ORIGINS = [
+    "https://*.gitpod.io",
+    "https://*.herokuapp.com",
+    "https://*.8000-studentofcod-djangoblog-pe15e0np6k9.ws-eu108.gitpod.io",
+    "https://*.codestarblog1-9170e0d04af0.herokuapp.com"
+]
+
+
 
 
 # Database

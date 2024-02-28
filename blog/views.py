@@ -74,9 +74,28 @@ class PostLike(View):
 
 class PostCreateView(View):
 
+
+
+    '''def index(self, request):
+       post = Post.objects.all()
+       if request.method == 'POST':
+        form = PostForm(request.POST)
+        if form.is_valid():
+            instance = form.save(commit=False)
+            instance.author = request.user
+            instance.save()
+            return redirect('post_create')
+        else:
+            form = PostForm()
+        context = {
+           'post': post,
+           'form': form
+        }
+
+        return render(request, 'post_create.html', context)'''
+
     def get(self, request, *args, **kwargs):
-        form = PostForm()
-    
+        form = PostForm()    
 
         return render(
             request,
@@ -85,55 +104,51 @@ class PostCreateView(View):
                 "form": form
             },
         )
-    #def get(self, request, slug, *args, **kwargs):
+
+    '''def add_item(self, request, *args, **kwargs):
+      if request.method == 'POST':
+        form = PostForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('home')
+      form = PostForm()
+      context = {
+        'form': form
+      }
+      return render(request, 'templates/post_create.html', context)'''
+    
+
+
+    '''def get(self, request, *args, **kwargs):
         #queryset = Post.objects.filter(status=1)
-        #post = get_object_or_404(queryset, slug=slug)
-        #forms = post.forms.filter(approved=True).order_by("-created_on")
-        #liked = False
-        #if post.likes.filter(id=self.request.user.id).exists():
-            #liked = True
+        post = Post.objects.all()
+        forms = post.forms.filter(approved=True).order_by("-created_on")
 
-        #return render(
-            #request,
-            #"post_create.html",
-            #{
-                #"form": form,
-                #"created": False,
-                #"liked": liked,
-                #"form": PostForm()
-            #},
-        #)
+        return render(
+            request,
+            "post_create.html",
+            {
+                "post": post,
+                "form": form,
+                "created": False,
+                "liked": liked,
+                "form": PostForm()
+            },
+        )'''
 
-    #def post(self, request, slug, *args, **kwargs):
+    def post(self, request, *args, **kwargs):
+        form = PostForm(data=request.POST)
+        if form.is_valid():
+            form.instance.author = request.user
+            # form.instance.name = request.user.username
+            form = form.save(commit=False)
+            # form.post = post
+            form.save()
+        else:
+           form = PostForm()
 
-        #queryset = Post.objects.filter(status=1)
-        #post = get_object_or_404(queryset, slug=slug)
-        #formss = post.forms.filter(approved=True).order_by("-created_on")
-        #liked = False
-        #if post.likes.filter(id=self.request.user.id).exists():
-            #liked = True
+        return HttpResponseRedirect(reverse('home'))
 
-        #form = PostForm(data=request.POST)
-        #if form.is_valid():
-            #form.instance.email = request.user.email
-            #form.instance.name = request.user.username
-            #form = form.save(commit=False)
-            #form.post = post
-            #form.save()
-        #else:
-            #form = PostForm()
-
-        #return render(
-            #request,
-            #"post_create.html",
-            #{
-            
-                #"form": form,
-                #"created": True,
-                #"liked": liked,
-                #"form": PostForm()
-            #},
-        #)
     #def post(self, request, slug, *args, **kwargs):
 
         

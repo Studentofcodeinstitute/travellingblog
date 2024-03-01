@@ -153,27 +153,94 @@ class PostCreateView(View):
 
         
 
-class PostUpdateView(View):
-    model = Post
-    fields = ['title', 'content']
+class PostEdit(View):
 
-    def form_valid(self, form):
-        form.instance.author = self.request.user
-        return super().form_valid(form)
+    def get(self, request, slug, *args, **kwargs):
+        queryset = Post.objects.filter(status=1)
+        post = get_object_or_404(queryset, slug=slug) 
+        form = PostForm(instance=post)   
 
-    def test_func(self):
-        post = self.get_object()
-        if self.request.user == post.author:
-            return True
-        return False
+        return render(
+            request,
+            "post_edit.html",
+            {
+                "form": form,
+                "post": post,
+            },
+        )
+
+    def post(self, request, slug, *args, **kwargs):
+        post = get_object_or_404(Post, slug=slug)
+        form = PostForm(data=request.POST, instance=post)
+        if form.is_valid():
+            form.instance.author = request.user
+            # form.instance.name = request.user.username
+            form = form.save(commit=False)
+            # form.post = post
+            form.save()
+        else:
+           form = PostForm()
+
+        return HttpResponseRedirect(reverse('home'))
+
+       #post = PostForm.objects.get(id=slug)
+    '''if request.method == 'POST':
+        form = PostForm(request.POST, instance=post)
+        if form.is_valid():
+            form.save()
+            return redirect('blog-post-detail', pk=post.id)
+    else:
+        form = PostUpdateForm(instance=post)
+    context = {
+        'post': post,
+        'form': form,
+    }
+    return HttpResponseRedirect(reverse('home'))'''
+
+    '''def post (self, request, *args, **kwargs):
+
+        item = get_object_or_404(Item, id=item_id)
+      if request.method == 'POST':
+        form=ItemForm(request.POST, instance=item)
+        if form.is_valid():
+            form.save()
+            return redirect('get_todo_list')
+      form = ItemForm(instance=item)
+      context = {
+        'form': form
+      }
+      return render(request, 'todo/edit_item.html', context)
+
+    #model = Post
+    #fields = ['title', 'content']
+
+    #def form_valid(self, form):
+        #form.instance.author = self.request.user
+        #return super().form_valid(form)
+
+    #def test_func(self):
+       # post = self.get_object()
+        #if self.request.user == post.author:
+           # return True
+        #return False'''
 
 
-class PostDeleteView(View):
-    model = Post
-    success_url = '/'
+class PostDelete(View):
 
-    def test_func(self):
-        post = self.get_object()
-        if self.request.user == post.author:
-            return True
-        return False
+    def get(self, request, slug, *args, **kwargs):
+        queryset = Post.objects.filter(status=1)
+        post = get_object_or_404(queryset, slug=slug) 
+
+        return render(
+            request,
+            "post_delete.html",
+            {
+                "post": post,
+            },
+        )
+
+    def post(self, request, slug, *args, **kwargs):
+       form = PostForm(data=request.POST)
+       if request.method == 'POST' and 'delete' in request.POST:
+            Post.objects.filter(slug=slug).delete()
+       return HttpResponseRedirect(reverse('home')) 

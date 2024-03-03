@@ -75,25 +75,6 @@ class PostLike(View):
 class PostCreateView(View):
 
 
-
-    '''def index(self, request):
-       post = Post.objects.all()
-       if request.method == 'POST':
-        form = PostForm(request.POST)
-        if form.is_valid():
-            instance = form.save(commit=False)
-            instance.author = request.user
-            instance.save()
-            return redirect('post_create')
-        else:
-            form = PostForm()
-        context = {
-           'post': post,
-           'form': form
-        }
-
-        return render(request, 'post_create.html', context)'''
-
     def get(self, request, *args, **kwargs):
         form = PostForm()    
 
@@ -105,36 +86,9 @@ class PostCreateView(View):
             },
         )
 
-    '''def add_item(self, request, *args, **kwargs):
-      if request.method == 'POST':
-        form = PostForm(request.POST)
-        if form.is_valid():
-            form.save()
-            return redirect('home')
-      form = PostForm()
-      context = {
-        'form': form
-      }
-      return render(request, 'templates/post_create.html', context)'''
     
 
 
-    '''def get(self, request, *args, **kwargs):
-        #queryset = Post.objects.filter(status=1)
-        post = Post.objects.all()
-        forms = post.forms.filter(approved=True).order_by("-created_on")
-
-        return render(
-            request,
-            "post_create.html",
-            {
-                "post": post,
-                "form": form,
-                "created": False,
-                "liked": liked,
-                "form": PostForm()
-            },
-        )'''
 
     def post(self, request, *args, **kwargs):
         form = PostForm(data=request.POST)
@@ -183,46 +137,7 @@ class PostEdit(View):
 
         return HttpResponseRedirect(reverse('home'))
 
-       #post = PostForm.objects.get(id=slug)
-    '''if request.method == 'POST':
-        form = PostForm(request.POST, instance=post)
-        if form.is_valid():
-            form.save()
-            return redirect('blog-post-detail', pk=post.id)
-    else:
-        form = PostUpdateForm(instance=post)
-    context = {
-        'post': post,
-        'form': form,
-    }
-    return HttpResponseRedirect(reverse('home'))'''
-
-    '''def post (self, request, *args, **kwargs):
-
-        item = get_object_or_404(Item, id=item_id)
-      if request.method == 'POST':
-        form=ItemForm(request.POST, instance=item)
-        if form.is_valid():
-            form.save()
-            return redirect('get_todo_list')
-      form = ItemForm(instance=item)
-      context = {
-        'form': form
-      }
-      return render(request, 'todo/edit_item.html', context)
-
-    #model = Post
-    #fields = ['title', 'content']
-
-    #def form_valid(self, form):
-        #form.instance.author = self.request.user
-        #return super().form_valid(form)
-
-    #def test_func(self):
-       # post = self.get_object()
-        #if self.request.user == post.author:
-           # return True
-        #return False'''
+      
 
 
 class PostDelete(View):

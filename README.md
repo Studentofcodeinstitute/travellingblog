@@ -1,39 +1,47 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# MANUAL TESTING
+***
+| Feature | Expected Outcome | Testing Performed | Result | Criteria
+| --- | --- |
+| View for all use |
+| Home page button | Redirect to home page | Clicked button | Redirect to home page | Pass
+| Register button | Redirect to register page | Clicked button | Redirect to register page | Pass
+| login button | Redirect to login page | Clicked button | Redirect to login page | Pass
+| View blog | On click open blog | Clicked blog | Open the clicked blog | Pass
+| Like the post | On click like the post | Clicked like button | On click liked the post | Pass
+| Access to footer link | On click access to the link | Clicked on one of the link | Redirect to one of the link | Pass
+| --- | --- |
+| As a Admin |
+| Feature | Expected Outcome | Testing Performed | Result | Criteria
+| Login to django platform | Redirect to django platform | Logedin with admin credentials | Redirect to django platform | Pass
+| user information page | Redirect to user information page | Clicked on the user | Redirect to user information page | Pass
+| Post information page | Redirect to post page and able to post with image detail | Clicked on the post | Redirect to post page and able to post with image detail | Pass
+| Comment information page | Redirect to Comment page and approve the comment needs approval | Clicked on the comment | Redirect to Comment page and approve the comment needs approval | Pass
+| Email information page | Redirect to email information page | Clicked on the Email | Redirect to email information page | Pass
+| Social Accounts information page | Redirect to Social Accounts page and see all accounts | Clicked on the Social Accounts page | Redirect to Social Accounts page and see all accounts | Pass
+| --- | --- |
+| As a Registered user |
+| View blog | On click open blog | Clicked blog | Open the clicked blog | Pass
+| Like the post | On click like the post | Clicked like button | On click liked the post | Pass
+| login button | Redirect to login page and access to login main page | Clicked button | Redirect to login page and access to login main page | Pass
+| Access to comment with approval | Able to write comment and submit and see approval needs comment | Clicked button | Able to write comment and submit and see approval needs comment | Pass
+| Click post button | Able to fillup the form and post new blog | Clicked post | Able to fillup the form and post new blog | Pass
+| Click edit button | Able to edit only user post | Clicked post | Able to edit only user post | Pass
+| Click delete button | Able to delete only user post | Clicked delete | Able to delete only user post | Pass
+| pagination | After six post will automatically move to next page | Added more then six page | After six post will automatically move to next page | Pass
 
-Welcome,
-
-This is the Code Institute student template for Codeanywhere. If you are using Gitpod then you need [this template](https://github.com/Code-Institute-Org/gitpod-full-template) instead.  We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
-
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Codeanywhere and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **August 30th, 2023**
-
-## Codeanywhere Reminders
-
-To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere, in the terminal, type:
-
-`python3 -m http.server`
-
-A button should appear to click: _Open Preview_ or _Open Browser_.
-
-To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere with no-cache, you can use this alias for `python3 -m http.server`.
-
-`http_server`
-
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
-
-A button should appear to click: _Open Preview_ or _Open Browser_.
-
-In Codeanywhere you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
-
-To log into the Heroku toolbelt CLI:
-
-1. Log in to your Heroku account and go to _Account Settings_ in the menu under your avatar.
-2. Scroll down to the _API Key_ and click _Reveal_
-3. Copy the key
-4. In Codeanywhere, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
-
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
-
----
-
-Happy coding!
+# USER STORY
+***
+| USER STORY | How i achieved | Criteria
+| --- | --- |
+| As a Site User/User/Admin I can click on a post so that I can read the full text | Site User/User/Admin can click a post and see details | Pass
+| As a Site User / Admin I can view the number of likes on each post so that I can see which is the most popular or viral | User can see number of likes implemented | Pass
+| As a Site User/Admin I can view a list of posts so that I can select one to read | User can see list of post on home page | Pass
+| As a Admin I can create draft posts so that I can finish writing the content later | Only admin can handle draft posts | Pass
+| As a User I can create, read, update and delete posts so that I can manage my blog content | User can create, edit and delete own posts | Pass
+| As a Site User / Admin I can view comments on an individual post so that I can read the conversation | Site user/user/admin can see all comments | Pass
+| As a Admin I can approve or disapprove comments so that I can filter out objectionable comments | Only admin can approve or disapprove comments | Pass
+| As a Site User / Admin I can like or unlike a post so that I can interact with the content | Site user/user/admin can like or unlike a post | Pass
+| As a User I can leave comments on a post so that I can be involved in the conversation | User has comment body to leave the comment and wait for approval | Pass
+| As a User/ Admin I can login to account so that I can comment, like and view my post list | There is a login button for user and admin to access main page | Pass
+| As a Site User I can register an account so that I can comment, post and like | There is a Register button for site user to register | Pass
+| 

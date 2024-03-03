@@ -1,9 +1,9 @@
 # MANUAL TESTING
 ***
-| Feature | Expected Outcome | Testing Performed | Result | Criteria
+## | Feature | Expected Outcome | Testing Performed | Result | Criteria
 | --- | --- |
-| View for all use |
-| Home page button | Redirect to home page | Clicked button | Redirect to home page | Pass
+## | View for all use |
+## | Home page button | Redirect to home page | Clicked button | Redirect to home page | Pass
 | Register button | Redirect to register page | Clicked button | Redirect to register page | Pass
 | login button | Redirect to login page | Clicked button | Redirect to login page | Pass
 | View blog | On click open blog | Clicked blog | Open the clicked blog | Pass

@@ -15,9 +15,9 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 
-DEBUG = True
+DEBUG = False
 
-#X_FRAME_OPTIONS = 'SAMEORIGIN'
+X_FRAME_OPTIONS = 'SAMEORIGIN'
 
 ALLOWED_HOSTS = ['8000-studentofco-travellingb-0sw0zyhz5me.ws-eu108.gitpod.io', "travelblog4-5071964a1b25.herokuapp.com"]
 

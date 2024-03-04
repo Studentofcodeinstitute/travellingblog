@@ -32,7 +32,7 @@
 # USER STORY
 ***
 |USER STORY|How i achieved|Criteria|
-| --- | --- |
+|---|---|---|
 |As a Site User/User/Admin I can click on a post so that I can read the full text|Site User/User/Admin can click a post and see details|Pass|
 |As a Site User / Admin I can view the number of likes on each post so that I can see which is the most popular or viral|User can see number of likes implemented|Pass|
 |As a Site User/Admin I can view a list of posts so that I can select one to read|User can see list of post on home page|Pass|

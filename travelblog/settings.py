@@ -17,7 +17,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 
 DEBUG = True
 
-X_FRAME_OPTIONS = 'SAMEORIGIN'
+#X_FRAME_OPTIONS = 'SAMEORIGIN'
 
 ALLOWED_HOSTS = ['8000-studentofco-travellingb-0sw0zyhz5me.ws-eu108.gitpod.io', "travelblog4-5071964a1b25.herokuapp.com"]
 
@@ -27,20 +27,21 @@ ACCOUNT_EMAIL_VERIFICATION = 'none'
 
 
 INSTALLED_APPS = [
+
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.sites',
-    'allauth',
-    'allauth.account',
-    'allauth.socialaccount',
     'cloudinary_storage',
     'django.contrib.staticfiles',
     'cloudinary',
-    'django_summernote',
     'crispy_forms',
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
+    'django_summernote',
     'blog',
 
 ]

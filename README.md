@@ -46,6 +46,7 @@ The live link can be found here -  <https://studentofcodeinstitute.github.io/exp
 * Crud function; create a post blog function for user.
 ## Unsolved Bugs
 * Remove "Forgot password" text in login page.
+* Deployed successfully on heroku but on the app some pages showing up 500 error 
 
 
 ## Credits

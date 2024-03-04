@@ -94,16 +94,13 @@ class PostCreateView(View):
         form = PostForm(data=request.POST)
         if form.is_valid():
             form.instance.author = request.user
-            # form.instance.name = request.user.username
             form = form.save(commit=False)
-            # form.post = post
             form.save()
         else:
            form = PostForm()
 
         return HttpResponseRedirect(reverse('home'))
 
-    #def post(self, request, slug, *args, **kwargs):
 
         
 
@@ -128,9 +125,7 @@ class PostEdit(View):
         form = PostForm(data=request.POST, instance=post)
         if form.is_valid():
             form.instance.author = request.user
-            # form.instance.name = request.user.username
             form = form.save(commit=False)
-            # form.post = post
             form.save()
         else:
            form = PostForm()

@@ -1,3 +1,73 @@
+# Travel Blog
+
+
+The webpage restrain four page, constructed by HTML, CSS and JavaScript.
+
+The website is made for people who love different culture, new places and appreciate share their travelling experiences.
+This website allows user to find out other people who has same passion and have conversation by commenting a post, sharing their post with beautiful content and title.
+
+
+![alt text](static/css/images/blog_main_page.png)
+
+## Features
+
+This webpage has three point of view; site user, user and admin. Site user can can see home, register and login page, they are able to register a account view posted blog, open them and read details. 
+Instead user can easily login their page, open a blog, like it, comment it that will show off after approval, post a blog, edit and delete.
+Instead Admin has access to django admin page. From where admin has access to approve or reject comments, see user accounts, email, post, modify user posted blog and add image.
+
+# Admin account
+***
+|name|password|
+|---|---|
+|admin|Baijid%5|
+
+## Validator Testing
+
+1. HTML:
+   No errors were returned when passing through the official W3C validator.
+
+2. CSS:
+   No errors were found when passing through the official (Jigsaw) validator.
+
+3. JSHint JavaScript Validator: No errors.
+
+## Deployment
+
+- The site was deployed to Heroku. The steps to deploy are as follows:
+  - In the GitHub repository, navigate to the Settings tab
+  - From the source section drop-down menu, select the Master Branch
+  - Once the master branch has been selected, the page will be automatically refreshed with a detailed ribbon display to indicate  the successful deployment.
+
+The live link can be found here -  <https://studentofcodeinstitute.github.io/expense-tracker-renovated/>
+
+
+## Solved Bugs
+
+* Crud function; create a post blog function for user.
+## Unsolved Bugs
+* Remove "Forgot password" text in login page.
+
+
+## Credits
+
+The main structure and design has been taken from CodeStar template. Crud function has been created by ideas from previous lessons.
+
+### Content
+
+The main content has been taken from CodeStar template.
+
+
+
+
+
+
+
+
+
+
+
+
+
 # MANUAL TESTING
 ***
 | Feature | Expected Outcome | Testing Performed | Result | Criteria  |

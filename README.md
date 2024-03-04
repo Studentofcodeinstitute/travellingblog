@@ -35,7 +35,7 @@ Instead Admin has access to django admin page. From where admin has access to ap
 
 - Deployed on Heroku
 
-The live link can be found here -  <https://studentofcodeinstitute.github.io/expense-tracker-renovated/>
+The live link can be found here -  <https://travelblog4-5071964a1b25.herokuapp.com/>
 
 
 ## Solved Bugs
@@ -43,7 +43,7 @@ The live link can be found here -  <https://studentofcodeinstitute.github.io/exp
 * Crud function; create a post blog function for user.
 ## Unsolved Bugs
 * Remove "Forgot password" text in login page.
-* Deployed successfully on heroku but on the app some pages showing up 500 error 
+* Deployed successfully on heroku but on the app some pages showing up 500 error.
 
 
 ## Credits

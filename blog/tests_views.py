@@ -1,11 +1,6 @@
 from django.test import TestCase
-from .models import Post, Comment
-from .views import PostDetail
-from .forms import PostForm, CommentForm
-from django.contrib.auth.models import User
-from django.utils.text import slugify
-from django.urls import reverse
-from django.shortcuts import render
+from .models import Post
+
 
 
 

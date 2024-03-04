@@ -1,7 +1,7 @@
 # MANUAL TESTING
 ***
 | Feature | Expected Outcome | Testing Performed | Result | Criteria  |
-| --- | --- |
+| --- | --- | --- | --- | --- |
 | View for all use |
 | Home page button | Redirect to home page | Clicked button | Redirect to home page | Pass  |
 | Register button | Redirect to register page | Clicked button | Redirect to register page | Pass  |
@@ -9,7 +9,7 @@
 | View blog | On click open blog | Clicked blog | Open the clicked blog | Pass  |
 | Like the post | On click like the post | Clicked like button | On click liked the post | Pass  |
 | Access to footer link | On click access to the link | Clicked on one of the link | Redirect to one of the link | Pass  |
-| --- | --- |
+||
 | As a Admin |
 | Feature | Expected Outcome | Testing Performed | Result | Criteria  |
 | Login to django platform | Redirect to django platform | Logedin with admin credentials | Redirect to django platform | Pass  |
@@ -18,7 +18,7 @@
 | Comment information page | Redirect to Comment page and approve the comment needs approval | Clicked on the comment | Redirect to Comment page and approve the comment needs approval | Pass  |
 | Email information page | Redirect to email information page | Clicked on the Email | Redirect to email information page | Pass  |
 | Social Accounts information page | Redirect to Social Accounts page and see all accounts | Clicked on the Social Accounts page | Redirect to Social Accounts page and see all accounts | Pass  |
-| --- | --- |
+||
 | As a Registered user |
 | View blog | On click open blog | Clicked blog | Open the clicked blog | Pass  |
 | Like the post | On click like the post | Clicked like button | On click liked the post | Pass  |
